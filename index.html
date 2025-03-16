@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Gym Management</h1>
+            <div>
+                <h2>Registrar Cliente</h2>
+                <form id="client-form">
+                    <input type="text" id="client-id" placeholder="ID del Cliente" required>
+                    <input type="text" id="client-name" placeholder="Nombre del Cliente" required>
+                    <input type="number" id="client-age" placeholder="Edad" required>
+                    <input type="number" id="client-weight" placeholder="Peso (kg)" step="0.1" required>
+                    <input type="number" id="client-height" placeholder="Altura (m)" step="0.01" required>
+                    <button type="submit">Registrar</button>
+                </form>
+                <div id="clients-list">
+                    <h3>Clientes Registrados</h3>
+                    <ul id="clients"></ul>
+                </div>
+            </div>
+            <div>
+                <h2>Registrar Entrenador</h2>
+                <form id="trainer-form">
+                    <input type="text" id="trainer-id" placeholder="ID del Entrenador" required>
+                    <input type="text" id="trainer-name" placeholder="Nombre del Entrenador" required>
+                    <input type="text" id="trainer-specialty" placeholder="Especialidad" required>
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="resources/Waifu.jpg" alt="Gym Image">
+        </div>
+    </div>
+    <script src="js/models/Client.js"></script>
+    <script src="js/models/Trainer.js"></script>
+    <script src="js/services/GymService.js"></script>
+    <script src="js/controllers/GymController.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
